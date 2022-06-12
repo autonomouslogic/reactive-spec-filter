@@ -20,16 +20,15 @@ dependencies {
     implementation "io.swagger.core.v3:swagger-core:2.1.12"
 
     testImplementation "org.junit.jupiter:junit-jupiter:5.7.2"
-    testImplementation 'io.cdap.http:netty-http:1.7.0'
-    testImplementation 'io.netty:netty-all:4.1.73.Final'
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.13.1"
-    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.1"
+    testImplementation "io.cdap.http:netty-http:1.7.0"
+    testImplementation "io.netty:netty-all:4.1.73.Final"
+    testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.1"
 }
 
 resolve {
-//    filterClass = "com.autonomouslogic.customspecfilter.CustomSpecFilter"
+    filterClass = "com.autonomouslogic.customspecfilter.CustomSpecFilter"
     outputFileName = "api"
-    outputFormat = "YAML"
+    outputFormat = "JSON"
     prettyPrint = "true"
     classpath = sourceSets.test.runtimeClasspath
     resourcePackages = ["com.autonomouslogic.customspecfilter"]
