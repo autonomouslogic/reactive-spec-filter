@@ -1,4 +1,11 @@
 # Custom SpecFilter
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/autonomouslogic/custom-spec-filter)
+[![javadoc](https://javadoc.io/badge2/com.autonomouslogic.customspecfilter/custom-spec-filter/javadoc.svg)](https://javadoc.io/doc/com.autonomouslogic.customspecfilter/custom-spec-filter)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/autonomouslogic/custom-spec-filter/Test/main)](https://github.com/autonomouslogic/custom-spec-filter/actions)
+[![GitHub](https://img.shields.io/github/license/autonomouslogic/custom-spec-filter)](https://spdx.org/licenses/MIT-0.html)
+
+
 A custom SpecFilter for the OpenAPI/Swagger.
 
 ## Removes implementation arguments from method signatures
@@ -23,26 +30,42 @@ plugin:
 [Gradle](https://github.com/swagger-api/swagger-core/tree/master/modules/swagger-gradle-plugin):
 ```groovy
 resolve {
-    filterClass = "com.autonomouslogic.customspecfilter.CustomSpecFilter"
+	filterClass = "com.autonomouslogic.customspecfilter.CustomSpecFilter"
 }
 ```
 
 [Maven](https://github.com/swagger-api/swagger-core/tree/master/modules/swagger-maven-plugin):
 ```xml
 <project>
-   <build>
-       <plugins>
-           <plugin>
-               <groupId>io.swagger.core.v3</groupId>
-               <artifactId>swagger-maven-plugin</artifactId>
-               <configuration>
-                   <filterClass>com.autonomouslogic.customspecfilter.CustomSpecFilter</filterClass>
-               </configuration>
-           </plugin>
-       </plugins>
-   </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-maven-plugin</artifactId>
+                <configuration>
+                    <filterClass>com.autonomouslogic.customspecfilter.CustomSpecFilter</filterClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 ```
 
 ## Resources
 * https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Extensions#filters
+
+## Versioning
+Custom SpecFilter follows [semantic versioning](https://semver.org/).
+
+## License
+Custom SpecFilter is licensed under the [MIT-0 license](https://spdx.org/licenses/MIT-0.html).
+
+## Status
+| Type          | Status                                                                                                                                                                                                                                                                                                                                                                                                                |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| LGTM         | [![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/autonomouslogic/custom-spec-filter.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/autonomouslogic/custom-spec-filter/context:java) [![Total alerts](https://img.shields.io/lgtm/alerts/g/autonomouslogic/custom-spec-filter.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/autonomouslogic/custom-spec-filter/alerts/)                              |
+| CodeClimate   | [![Maintainability](https://api.codeclimate.com/v1/badges/04243b52f38c8cecf66c/maintainability)](https://codeclimate.com/github/autonomouslogic/custom-spec-filter/maintainability)                                                                                                                                                                                                                                        |
+| SonarCloud    | [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=autonomouslogic_custom-spec-filter&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=autonomouslogic_custom-spec-filter) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=autonomouslogic_custom-spec-filter&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=autonomouslogic_custom-spec-filter) |
+| Libraries.io  | ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/maven/com.autonomouslogic.customspecfilter:custom-spec-filter)                                                                                                                                                                                                                                                                 |
+| Snyk          | [![Known Vulnerabilities](https://snyk.io/test/github/autonomouslogic/custom-spec-filter/badge.svg)](https://snyk.io/test/github/autonomouslogic/custom-spec-filter)                                                                                                                                                                                                                                                            |
+| Synatype Lift | [link](https://lift.sonatype.com/)                                                                                                                                                                                                                                                                                                                                                                                    |
