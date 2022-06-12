@@ -2,7 +2,7 @@ plugins {
     id "java"
     id "idea"
     id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "0.3.12"
-    id "io.swagger.core.v3.swagger-gradle-plugin" version "2.1.12"
+    id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.0"
     id "io.freefair.lombok" version "6.4.3.1"
 }
 
@@ -16,13 +16,13 @@ repositories {
 }
 
 dependencies {
-    implementation "io.swagger.core.v3:swagger-annotations:2.1.12"
-    implementation "io.swagger.core.v3:swagger-core:2.1.12"
+    implementation "io.swagger.core.v3:swagger-annotations:2.2.0"
+    implementation "io.swagger.core.v3:swagger-core:2.2.0"
 
-    testImplementation "org.junit.jupiter:junit-jupiter:5.7.2"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
     testImplementation "io.cdap.http:netty-http:1.7.0"
-    testImplementation "io.netty:netty-all:4.1.73.Final"
-    testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.1"
+    testImplementation "io.netty:netty-all:4.1.77.Final"
+    testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.3"
 }
 
 resolve {
