@@ -4,6 +4,9 @@ plugins {
     id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "0.3.12"
     id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.1"
     id "io.freefair.lombok" version "6.4.3.1"
+    id "maven-publish"
+    id "signing"
+    id "io.github.gradle-nexus.publish-plugin" version "1.1.0"
 }
 
 group "com.autonomouslogic.customspecfilter"
@@ -48,3 +51,49 @@ test {
     }
 }
 test.dependsOn(resolve)
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            pom {
+                name = "Custom SpecFilter"
+                description = "A custom SpecFilter for the OpenAPI/Swagger."
+                url = "https://github.com/autonomouslogic/custom-spec-filter"
+                licenses {
+                    license {
+                        name = "MIT-0"
+                        url = "https://spdx.org/licenses/MIT-0.html"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "kennethjor"
+                        name = "Kenneth Jørgensen"
+                        email = "kenneth@autonomouslogic.com"
+                    }
+                }
+                scm {
+                    connection = "scm:git:git://github.com:autonomouslogic/custom-spec-filter.git"
+                    developerConnection = "scm:git:ssh://github.com:autonomouslogic/custom-spec-filter.git"
+                    url = "https://github.com/autonomouslogic/custom-spec-filter"
+                }
+            }
+            from(components.java)
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+nexusPublishing {
+    repositories {
+        sonatype()
+    }
+}
