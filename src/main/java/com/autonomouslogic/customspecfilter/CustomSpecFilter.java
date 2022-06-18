@@ -9,6 +9,7 @@ import io.swagger.v3.oas.models.media.Content;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.RequestBody;
 import io.swagger.v3.oas.models.responses.ApiResponse;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
@@ -80,7 +81,22 @@ public class CustomSpecFilter extends AbstractSpecFilter {
 
 	private OpenAPI sortValues(OpenAPI openAPI) {
 		// Sort paths.
-		Paths paths = openAPI.getPaths().entrySet().stream()
+		if (openAPI.getPaths() != null) {
+			openAPI.setPaths(sortPaths(openAPI.getPaths()));
+		}
+		var components = openAPI.getComponents();
+		if (components != null) {
+			// Sort schemas.
+			if (components.getSchemas() != null) {
+				components.setSchemas(sortSchemas(components.getSchemas()));
+			}
+		}
+
+		return openAPI;
+	}
+
+	private Paths sortPaths(@NonNull Paths paths) {
+		var newPaths = paths.entrySet().stream()
 			.sorted(Map.Entry.comparingByKey())
 			.collect(Collectors.toMap(
 				Map.Entry::getKey,
@@ -90,9 +106,11 @@ public class CustomSpecFilter extends AbstractSpecFilter {
 				},
 				Paths::new
 			));
-		openAPI.setPaths(paths);
-		// Sort asset types.
-		Map<String, Schema> schemas = openAPI.getComponents().getSchemas().entrySet().stream()
+		return newPaths;
+	}
+
+	private Map<String, Schema> sortSchemas(@NonNull Map<String, Schema> schemas) {
+		return schemas.entrySet().stream()
 			.sorted(Map.Entry.comparingByKey())
 			.collect(Collectors.toMap(
 				Map.Entry::getKey,
@@ -102,8 +120,5 @@ public class CustomSpecFilter extends AbstractSpecFilter {
 				},
 				LinkedHashMap::new
 			));
-		openAPI.getComponents().setSchemas(schemas);
-
-		return openAPI;
 	}
 }
