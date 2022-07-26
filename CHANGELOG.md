@@ -1,5 +1,12 @@
 Custom SpecFilter Changelog
 
+## [1.0.4](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.3...1.0.4) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies to v2.2.2 ([#8](https://github.com/autonomouslogic/custom-spec-filter/issues/8)) ([d551b08](https://github.com/autonomouslogic/custom-spec-filter/commit/d551b08aeef8bc09523306028e0fbe30131452a7))
+
 ## [1.0.3](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.2...1.0.3) (2022-07-19)
 
 
