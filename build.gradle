@@ -24,7 +24,7 @@ dependencies {
 
     testImplementation "org.junit.jupiter:junit-jupiter:5.9.0"
     testImplementation "io.cdap.http:netty-http:1.7.0"
-    testImplementation "io.netty:netty-all:4.1.79.Final"
+    testImplementation "io.netty:netty-all:4.1.80.Final"
     testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.3"
 }
 
