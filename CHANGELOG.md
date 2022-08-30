@@ -1,5 +1,12 @@
 Custom SpecFilter Changelog
 
+## [1.0.7](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.6...1.0.7) (2022-08-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.netty:netty-all to v4.1.80.final ([#11](https://github.com/autonomouslogic/custom-spec-filter/issues/11)) ([51d0ef3](https://github.com/autonomouslogic/custom-spec-filter/commit/51d0ef36c264c45aa56b01171c6babc56d76d12d))
+
 ## [1.0.6](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.5...1.0.6) (2022-08-09)
 
 
