@@ -1,5 +1,17 @@
 Custom SpecFilter Changelog
 
+## [1.0.8](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.7...1.0.8) (2022-09-01)
+
+
+### Continuous Integration
+
+* Shared renovate config [skip ci] ([ab4a180](https://github.com/autonomouslogic/custom-spec-filter/commit/ab4a18063654b8e207c7d8bf64f2ca74f9b53142))
+
+
+### Miscellaneous Chores
+
+* **deps:** update plugin io.freefair.lombok to v6.5.1 ([#12](https://github.com/autonomouslogic/custom-spec-filter/issues/12)) ([1fdda70](https://github.com/autonomouslogic/custom-spec-filter/commit/1fdda70223c110b68ad4cc4980e2e6af810c07fe))
+
 ## [1.0.7](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.6...1.0.7) (2022-08-30)
 
 
