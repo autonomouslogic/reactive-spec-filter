@@ -1,5 +1,17 @@
 Custom SpecFilter Changelog
 
+## [1.0.9](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.8...1.0.9) (2022-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.core:jackson-databind to v2.13.4 ([#13](https://github.com/autonomouslogic/custom-spec-filter/issues/13)) ([11cd9e1](https://github.com/autonomouslogic/custom-spec-filter/commit/11cd9e125f5098ad0581f416d70f2a8c958a87de))
+
+
+### Continuous Integration
+
+* Disabled auto-releases on dependency updates. ([039c2b1](https://github.com/autonomouslogic/custom-spec-filter/commit/039c2b1d5268e8985d2bf18b00a4dbc75412e9e0))
+
 ## [1.0.8](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.7...1.0.8) (2022-09-01)
 
 
