@@ -22,7 +22,7 @@ dependencies {
     implementation "io.swagger.core.v3:swagger-annotations:2.2.2"
     implementation "io.swagger.core.v3:swagger-core:2.2.2"
 
-    testImplementation "org.junit.jupiter:junit-jupiter:5.9.0"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.9.1"
     testImplementation "io.cdap.http:netty-http:1.7.0"
     testImplementation "io.netty:netty-all:4.1.82.Final"
     testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.4"
