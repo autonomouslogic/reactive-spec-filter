@@ -1,5 +1,90 @@
 Custom SpecFilter Changelog
 
+## [1.0.11](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.10...1.0.11) (2022-09-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.netty:netty-all to v4.1.82.final ([#15](https://github.com/autonomouslogic/custom-spec-filter/issues/15)) ([f9eb9dc](https://github.com/autonomouslogic/custom-spec-filter/commit/f9eb9dcb761a57923a77fe6804db66b5a88ecfa3))
+
+## [1.0.10](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.9...1.0.10) (2022-09-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.netty:netty-all to v4.1.81.final ([#14](https://github.com/autonomouslogic/custom-spec-filter/issues/14)) ([461a9e8](https://github.com/autonomouslogic/custom-spec-filter/commit/461a9e8d0a6dbc42b3e69c61df5f63cf64ab3f8f))
+
+## [1.0.9](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.8...1.0.9) (2022-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.core:jackson-databind to v2.13.4 ([#13](https://github.com/autonomouslogic/custom-spec-filter/issues/13)) ([11cd9e1](https://github.com/autonomouslogic/custom-spec-filter/commit/11cd9e125f5098ad0581f416d70f2a8c958a87de))
+
+
+### Continuous Integration
+
+* Disabled auto-releases on dependency updates. ([039c2b1](https://github.com/autonomouslogic/custom-spec-filter/commit/039c2b1d5268e8985d2bf18b00a4dbc75412e9e0))
+
+## [1.0.8](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.7...1.0.8) (2022-09-01)
+
+
+### Continuous Integration
+
+* Shared renovate config [skip ci] ([ab4a180](https://github.com/autonomouslogic/custom-spec-filter/commit/ab4a18063654b8e207c7d8bf64f2ca74f9b53142))
+
+
+### Miscellaneous Chores
+
+* **deps:** update plugin io.freefair.lombok to v6.5.1 ([#12](https://github.com/autonomouslogic/custom-spec-filter/issues/12)) ([1fdda70](https://github.com/autonomouslogic/custom-spec-filter/commit/1fdda70223c110b68ad4cc4980e2e6af810c07fe))
+
+## [1.0.7](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.6...1.0.7) (2022-08-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.netty:netty-all to v4.1.80.final ([#11](https://github.com/autonomouslogic/custom-spec-filter/issues/11)) ([51d0ef3](https://github.com/autonomouslogic/custom-spec-filter/commit/51d0ef36c264c45aa56b01171c6babc56d76d12d))
+
+## [1.0.6](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.5...1.0.6) (2022-08-09)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies to v7.5.1 ([#10](https://github.com/autonomouslogic/custom-spec-filter/issues/10)) ([f4a3fc5](https://github.com/autonomouslogic/custom-spec-filter/commit/f4a3fc55ba321a77ddf5d868fb6811a61cd536aa))
+
+## [1.0.5](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.4...1.0.5) (2022-08-02)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#9](https://github.com/autonomouslogic/custom-spec-filter/issues/9)) ([481cf73](https://github.com/autonomouslogic/custom-spec-filter/commit/481cf730798ebb3a100cddc5e36faef5dd8279ba))
+
+## [1.0.4](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.3...1.0.4) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies to v2.2.2 ([#8](https://github.com/autonomouslogic/custom-spec-filter/issues/8)) ([d551b08](https://github.com/autonomouslogic/custom-spec-filter/commit/d551b08aeef8bc09523306028e0fbe30131452a7))
+
+## [1.0.3](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.2...1.0.3) (2022-07-19)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies ([#7](https://github.com/autonomouslogic/custom-spec-filter/issues/7)) ([06d08ad](https://github.com/autonomouslogic/custom-spec-filter/commit/06d08add4ab13544a9d8383d654ab5e73d760984))
+
+## [1.0.2](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.1...1.0.2) (2022-07-13)
+
+
+### Continuous Integration
+
+* enabled automatic releases. ([59a3659](https://github.com/autonomouslogic/custom-spec-filter/commit/59a3659c0e6433466091b67a2e5962881368d10e))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies ([#6](https://github.com/autonomouslogic/custom-spec-filter/issues/6)) ([ff27a21](https://github.com/autonomouslogic/custom-spec-filter/commit/ff27a216dc7170cdc55a7783ef0c6eb5a5793c5e))
+
 ## [1.0.1](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.0...1.0.1) (2022-06-21)
 
 
