@@ -1,12 +1,13 @@
 plugins {
-    id "java"
-    id "idea"
-    id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "0.3.13"
-    id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.1"
-    id "io.freefair.lombok" version "6.5.0.2"
-    id "maven-publish"
-    id "signing"
-    id "io.github.gradle-nexus.publish-plugin" version "1.1.0"
+	id "java"
+	id "idea"
+	id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "0.3.13"
+	id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.1"
+	id "io.freefair.lombok" version "6.5.0.2"
+	id "maven-publish"
+	id "signing"
+	id "io.github.gradle-nexus.publish-plugin" version "1.1.0"
+	id "com.diffplug.spotless" version "6.11.0"
 }
 
 group "com.autonomouslogic.customspecfilter"
@@ -15,85 +16,96 @@ sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    implementation "io.swagger.core.v3:swagger-annotations:2.2.1"
-    implementation "io.swagger.core.v3:swagger-core:2.2.1"
+	implementation "io.swagger.core.v3:swagger-annotations:2.2.1"
+	implementation "io.swagger.core.v3:swagger-core:2.2.1"
 
-    testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
-    testImplementation "io.cdap.http:netty-http:1.7.0"
-    testImplementation "io.netty:netty-all:4.1.78.Final"
-    testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.3"
+	testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
+	testImplementation "io.cdap.http:netty-http:1.7.0"
+	testImplementation "io.netty:netty-all:4.1.78.Final"
+	testImplementation "com.fasterxml.jackson.core:jackson-databind:2.13.3"
 }
 
 resolve {
-    filterClass = "com.autonomouslogic.customspecfilter.CustomSpecFilter"
-    outputFileName = "api"
-    outputFormat = "JSON"
-    prettyPrint = "true"
-    classpath = sourceSets.test.runtimeClasspath
-    resourcePackages = ["com.autonomouslogic.customspecfilter"]
-    outputDir = file("build")
+	filterClass = "com.autonomouslogic.customspecfilter.CustomSpecFilter"
+	outputFileName = "api"
+	outputFormat = "JSON"
+	prettyPrint = "true"
+	classpath = sourceSets.test.runtimeClasspath
+	resourcePackages = ["com.autonomouslogic.customspecfilter"]
+	outputDir = file("build")
 }
 
 test {
-    useJUnitPlatform()
+	useJUnitPlatform()
 
-    testLogging {
-        events = [ "FAILED", "PASSED", "SKIPPED" ]
-        showExceptions = true
-        exceptionFormat = "FULL"
-        showExceptions = true
-        showCauses = true
-        showStackTraces = true
-    }
+	testLogging {
+		events = [ "FAILED", "PASSED", "SKIPPED" ]
+		showExceptions = true
+		exceptionFormat = "FULL"
+		showExceptions = true
+		showCauses = true
+		showStackTraces = true
+	}
 }
 test.dependsOn(resolve)
 
 java {
-    withJavadocJar()
-    withSourcesJar()
+	withJavadocJar()
+	withSourcesJar()
 }
 
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            pom {
-                name = "Custom SpecFilter"
-                description = "A custom SpecFilter for the OpenAPI/Swagger."
-                url = "https://github.com/autonomouslogic/custom-spec-filter"
-                licenses {
-                    license {
-                        name = "MIT-0"
-                        url = "https://spdx.org/licenses/MIT-0.html"
-                    }
-                }
-                developers {
-                    developer {
-                        id = "kennethjor"
-                        name = "Kenneth Jørgensen"
-                        email = "kenneth@autonomouslogic.com"
-                    }
-                }
-                scm {
-                    connection = "scm:git:git://github.com:autonomouslogic/custom-spec-filter.git"
-                    developerConnection = "scm:git:ssh://github.com:autonomouslogic/custom-spec-filter.git"
-                    url = "https://github.com/autonomouslogic/custom-spec-filter"
-                }
-            }
-            from(components.java)
-        }
-    }
+	publications {
+		mavenJava(MavenPublication) {
+			pom {
+				name = "Custom SpecFilter"
+				description = "A custom SpecFilter for the OpenAPI/Swagger."
+				url = "https://github.com/autonomouslogic/custom-spec-filter"
+				licenses {
+					license {
+						name = "MIT-0"
+						url = "https://spdx.org/licenses/MIT-0.html"
+					}
+				}
+				developers {
+					developer {
+						id = "kennethjor"
+						name = "Kenneth Jørgensen"
+						email = "kenneth@autonomouslogic.com"
+					}
+				}
+				scm {
+					connection = "scm:git:git://github.com:autonomouslogic/custom-spec-filter.git"
+					developerConnection = "scm:git:ssh://github.com:autonomouslogic/custom-spec-filter.git"
+					url = "https://github.com/autonomouslogic/custom-spec-filter"
+				}
+			}
+			from(components.java)
+		}
+	}
 }
 
 signing {
-    sign publishing.publications.mavenJava
+	sign publishing.publications.mavenJava
 }
 
 nexusPublishing {
-    repositories {
-        sonatype()
-    }
+	repositories {
+		sonatype()
+	}
+}
+
+spotless {
+	java {
+		palantirJavaFormat()
+		indentWithTabs()
+	}
+
+	groovyGradle {
+		indentWithTabs()
+	}
 }

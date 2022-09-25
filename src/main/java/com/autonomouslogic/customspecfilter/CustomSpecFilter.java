@@ -9,9 +9,6 @@ import io.swagger.v3.oas.models.media.Content;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.RequestBody;
 import io.swagger.v3.oas.models.responses.ApiResponse;
-import lombok.NonNull;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
@@ -20,6 +17,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * SpecFilter for working with Reactive types.
@@ -27,22 +26,26 @@ import java.util.stream.Collectors;
 @Slf4j
 public class CustomSpecFilter extends AbstractSpecFilter {
 	private static final Set<String> filteredSchemas = new HashSet<>(Arrays.asList(
-		"BodyConsumer",
-		"DecoderResult",
-		"HttpMethod",
-		"HttpRequest",
-		"HttpVersion",
-		"HttpResponder"
-	));
+			"BodyConsumer", "DecoderResult", "HttpMethod", "HttpRequest", "HttpVersion", "HttpResponder"));
 
 	@Override
-	public Optional<OpenAPI> filterOpenAPI(OpenAPI openAPI, Map<String, List<String>> params, Map<String, String> cookies, Map<String, List<String>> headers) {
+	public Optional<OpenAPI> filterOpenAPI(
+			OpenAPI openAPI,
+			Map<String, List<String>> params,
+			Map<String, String> cookies,
+			Map<String, List<String>> headers) {
 		openAPI = sortValues(openAPI);
 		return super.filterOpenAPI(openAPI, params, cookies, headers);
 	}
 
 	@Override
-	public Optional<RequestBody> filterRequestBody(RequestBody requestBody, Operation operation, ApiDescription api, Map<String, List<String>> params, Map<String, String> cookies, Map<String, List<String>> headers) {
+	public Optional<RequestBody> filterRequestBody(
+			RequestBody requestBody,
+			Operation operation,
+			ApiDescription api,
+			Map<String, List<String>> params,
+			Map<String, String> cookies,
+			Map<String, List<String>> headers) {
 		// Remove all request bodies from GET and DELETEs.
 		if (api.getMethod().equals("GET") || api.getMethod().equals("DELETE")) {
 			return Optional.empty();
@@ -59,7 +62,13 @@ public class CustomSpecFilter extends AbstractSpecFilter {
 	}
 
 	@Override
-	public Optional<ApiResponse> filterResponse(ApiResponse response, Operation operation, ApiDescription api, Map<String, List<String>> params, Map<String, String> cookies, Map<String, List<String>> headers) {
+	public Optional<ApiResponse> filterResponse(
+			ApiResponse response,
+			Operation operation,
+			ApiDescription api,
+			Map<String, List<String>> params,
+			Map<String, String> cookies,
+			Map<String, List<String>> headers) {
 		// Remove any response bodies which have been auto-resolved to "*/*".
 		Content content = response.getContent();
 		if (content != null) {
@@ -72,7 +81,11 @@ public class CustomSpecFilter extends AbstractSpecFilter {
 	}
 
 	@Override
-	public Optional<Schema> filterSchema(Schema schema, Map<String, List<String>> params, Map<String, String> cookies, Map<String, List<String>> headers) {
+	public Optional<Schema> filterSchema(
+			Schema schema,
+			Map<String, List<String>> params,
+			Map<String, String> cookies,
+			Map<String, List<String>> headers) {
 		if (filteredSchemas.contains(schema.getName())) {
 			return Optional.empty();
 		}
@@ -97,28 +110,26 @@ public class CustomSpecFilter extends AbstractSpecFilter {
 
 	private Paths sortPaths(@NonNull Paths paths) {
 		var newPaths = paths.entrySet().stream()
-			.sorted(Map.Entry.comparingByKey())
-			.collect(Collectors.toMap(
-				Map.Entry::getKey,
-				Map.Entry::getValue,
-				(u,v) -> {
-					throw new IllegalStateException(String.format("Duplicate key %s", u));
-				},
-				Paths::new
-			));
+				.sorted(Map.Entry.comparingByKey())
+				.collect(Collectors.toMap(
+						Map.Entry::getKey,
+						Map.Entry::getValue,
+						(u, v) -> {
+							throw new IllegalStateException(String.format("Duplicate key %s", u));
+						},
+						Paths::new));
 		return newPaths;
 	}
 
 	private Map<String, Schema> sortSchemas(@NonNull Map<String, Schema> schemas) {
 		return schemas.entrySet().stream()
-			.sorted(Map.Entry.comparingByKey())
-			.collect(Collectors.toMap(
-				Map.Entry::getKey,
-				Map.Entry::getValue,
-				(u,v) -> {
-					throw new IllegalStateException(String.format("Duplicate key %s", u));
-				},
-				LinkedHashMap::new
-			));
+				.sorted(Map.Entry.comparingByKey())
+				.collect(Collectors.toMap(
+						Map.Entry::getKey,
+						Map.Entry::getValue,
+						(u, v) -> {
+							throw new IllegalStateException(String.format("Duplicate key %s", u));
+						},
+						LinkedHashMap::new));
 	}
 }

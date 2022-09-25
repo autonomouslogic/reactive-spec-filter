@@ -1,9 +1,8 @@
 package com.autonomouslogic.customspecfilter.util;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import lombok.SneakyThrows;
-
 import java.io.File;
+import lombok.SneakyThrows;
 
 public class Spec {
 	private static OpenAPI spec;

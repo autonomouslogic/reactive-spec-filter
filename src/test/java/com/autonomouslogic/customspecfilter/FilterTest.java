@@ -1,11 +1,10 @@
 package com.autonomouslogic.customspecfilter;
 
-import com.autonomouslogic.customspecfilter.util.Spec;
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.autonomouslogic.customspecfilter.util.Spec;
+import org.junit.jupiter.api.Test;
 
 public class FilterTest {
 	@Test
