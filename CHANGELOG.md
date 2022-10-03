@@ -1,5 +1,17 @@
 Custom SpecFilter Changelog
 
+## [1.0.12](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.11...1.0.12) (2022-10-03)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#18](https://github.com/autonomouslogic/custom-spec-filter/issues/18)) ([3340bd5](https://github.com/autonomouslogic/custom-spec-filter/commit/3340bd590228041eb22c78dd65799720bc6cd9cb))
+
+
+### Styles
+
+* Added Spotless formatting. ([#17](https://github.com/autonomouslogic/custom-spec-filter/issues/17)) ([38339f9](https://github.com/autonomouslogic/custom-spec-filter/commit/38339f95c400f8df9887546f7c70126c39638121))
+
 ## [1.0.11](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.10...1.0.11) (2022-09-20)
 
 
