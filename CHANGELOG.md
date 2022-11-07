@@ -1,5 +1,17 @@
 Custom SpecFilter Changelog
 
+## [1.0.13](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.12...1.0.13) (2022-11-07)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#20](https://github.com/autonomouslogic/custom-spec-filter/issues/20)) ([c530576](https://github.com/autonomouslogic/custom-spec-filter/commit/c53057675aa8039345118aad864b4b1241cc5e49))
+
+
+### Miscellaneous Chores
+
+* **deps:** update amannn/action-semantic-pull-request action to v5 ([#19](https://github.com/autonomouslogic/custom-spec-filter/issues/19)) ([4edf62e](https://github.com/autonomouslogic/custom-spec-filter/commit/4edf62e8a9b289e3d5ad34519083c64809dceded))
+
 ## [1.0.12](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.11...1.0.12) (2022-10-03)
 
 
