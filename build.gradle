@@ -1,13 +1,13 @@
 plugins {
 	id "java"
 	id "idea"
-	id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "0.3.20"
-	id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.6"
-	id "io.freefair.lombok" version "6.5.1"
+	id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "0.3.24"
+	id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.7"
+	id "io.freefair.lombok" version "6.6"
 	id "maven-publish"
 	id "signing"
 	id "io.github.gradle-nexus.publish-plugin" version "1.1.0"
-	id "com.diffplug.spotless" version "6.11.0"
+	id "com.diffplug.spotless" version "6.12.0"
 }
 
 group "com.autonomouslogic.customspecfilter"
@@ -20,13 +20,13 @@ repositories {
 }
 
 dependencies {
-	implementation "io.swagger.core.v3:swagger-annotations:2.2.6"
-	implementation "io.swagger.core.v3:swagger-core:2.2.6"
+	implementation "io.swagger.core.v3:swagger-annotations:2.2.7"
+	implementation "io.swagger.core.v3:swagger-core:2.2.7"
 
 	testImplementation "org.junit.jupiter:junit-jupiter:5.9.1"
 	testImplementation "io.cdap.http:netty-http:1.7.0"
-	testImplementation "io.netty:netty-all:4.1.84.Final"
-	testImplementation "com.fasterxml.jackson.core:jackson-databind:2.14.0"
+	testImplementation "io.netty:netty-all:4.1.85.Final"
+	testImplementation "com.fasterxml.jackson.core:jackson-databind:2.14.1"
 }
 
 resolve {
