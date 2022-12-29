@@ -26,7 +26,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CustomSpecFilter extends AbstractSpecFilter {
 	private static final Set<String> filteredSchemas = new HashSet<>(Arrays.asList(
-			"BodyConsumer", "DecoderResult", "HttpMethod", "HttpRequest", "HttpVersion", "HttpResponder"));
+			"BodyConsumer",
+			"DecoderResult",
+			"HttpMethod",
+			"HttpRequest",
+			"FullHttpRequest",
+			"HttpVersion",
+			"HttpResponder"));
 
 	@Override
 	public Optional<OpenAPI> filterOpenAPI(
