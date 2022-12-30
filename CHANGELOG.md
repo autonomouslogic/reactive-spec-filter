@@ -1,5 +1,17 @@
 Custom SpecFilter Changelog
 
+## [1.1.0](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.13...1.1.0) (2022-12-30)
+
+
+### Features
+
+* Added FullHttpRequest to list of filtered schemas. ([9920ccc](https://github.com/autonomouslogic/custom-spec-filter/commit/9920ccc1bf0f8e61ce408d05244f46d1222ac36a))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies ([#21](https://github.com/autonomouslogic/custom-spec-filter/issues/21)) ([ecd6b6c](https://github.com/autonomouslogic/custom-spec-filter/commit/ecd6b6c8d7992a15e9190bf78733b5b1a14d1fc9))
+
 ## [1.0.13](https://github.com/autonomouslogic/custom-spec-filter/compare/1.0.12...1.0.13) (2022-11-07)
 
 
