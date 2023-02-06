@@ -1,5 +1,17 @@
 Custom SpecFilter Changelog
 
+## [1.1.2](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.1...1.1.2) (2023-02-06)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#25](https://github.com/autonomouslogic/custom-spec-filter/issues/25)) ([2f37788](https://github.com/autonomouslogic/custom-spec-filter/commit/2f37788f06d62fc1b54c98e2b23e15de25032ced))
+
+
+### Miscellaneous Chores
+
+* **deps:** update plugin org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin to v1 ([#24](https://github.com/autonomouslogic/custom-spec-filter/issues/24)) ([b05bea1](https://github.com/autonomouslogic/custom-spec-filter/commit/b05bea1c4c515ba34ab69c7cb6304a0d15186d33))
+
 ## [1.1.1](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.0...1.1.1) (2023-01-02)
 
 
