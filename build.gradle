@@ -1,13 +1,13 @@
 plugins {
 	id "java"
 	id "idea"
-	id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "1.0.1"
+	id "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin" version "1.1.4"
 	id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.8"
-	id "io.freefair.lombok" version "6.6.1"
+	id "io.freefair.lombok" version "6.6.3"
 	id "maven-publish"
 	id "signing"
-	id "io.github.gradle-nexus.publish-plugin" version "1.1.0"
-	id "com.diffplug.spotless" version "6.14.1"
+	id "io.github.gradle-nexus.publish-plugin" version "1.2.0"
+	id "com.diffplug.spotless" version "6.16.0"
 }
 
 group "com.autonomouslogic.customspecfilter"
@@ -25,7 +25,7 @@ dependencies {
 
 	testImplementation "org.junit.jupiter:junit-jupiter:5.9.2"
 	testImplementation "io.cdap.http:netty-http:1.7.0"
-	testImplementation "io.netty:netty-all:4.1.87.Final"
+	testImplementation "io.netty:netty-all:4.1.89.Final"
 	testImplementation "com.fasterxml.jackson.core:jackson-databind:2.14.2"
 }
 
