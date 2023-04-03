@@ -1,5 +1,18 @@
 Custom SpecFilter Changelog
 
+## [1.1.3](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.2...1.1.3) (2023-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#29](https://github.com/autonomouslogic/custom-spec-filter/issues/29)) ([a9d15ed](https://github.com/autonomouslogic/custom-spec-filter/commit/a9d15eda102dd91cd5c1a4761be2600cba58c103))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies ([#27](https://github.com/autonomouslogic/custom-spec-filter/issues/27)) ([a1ced71](https://github.com/autonomouslogic/custom-spec-filter/commit/a1ced71023d6860fa8ebf5e8a2d41d5e792ba1d9))
+* **deps:** update plugin io.freefair.lombok to v8 ([#28](https://github.com/autonomouslogic/custom-spec-filter/issues/28)) ([e79fec3](https://github.com/autonomouslogic/custom-spec-filter/commit/e79fec37562e39f4c9e1df2c8023eca7cbbc9147))
+
 ## [1.1.2](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.1...1.1.2) (2023-02-06)
 
 
