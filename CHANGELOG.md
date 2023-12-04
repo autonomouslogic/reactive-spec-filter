@@ -1,5 +1,18 @@
 Custom SpecFilter Changelog
 
+## [1.1.9](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.8...1.1.9) (2023-12-04)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#40](https://github.com/autonomouslogic/custom-spec-filter/issues/40)) ([f91f218](https://github.com/autonomouslogic/custom-spec-filter/commit/f91f21890c8547de824c85b7b72505ed83b045b5))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies ([#38](https://github.com/autonomouslogic/custom-spec-filter/issues/38)) ([5a65161](https://github.com/autonomouslogic/custom-spec-filter/commit/5a65161391ae3bcb7aef544729101aeddc6d84ac))
+* **deps:** update plugin com.diffplug.spotless to v6.23.3 ([#41](https://github.com/autonomouslogic/custom-spec-filter/issues/41)) ([d1f4275](https://github.com/autonomouslogic/custom-spec-filter/commit/d1f4275417520d3b1777645a1e3feb75165d8a5d))
+
 ## [1.1.8](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.7...1.1.8) (2023-10-02)
 
 
