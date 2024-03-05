@@ -1,5 +1,22 @@
 Custom SpecFilter Changelog
 
+## [1.1.11](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.10...1.1.11) (2024-03-05)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#47](https://github.com/autonomouslogic/custom-spec-filter/issues/47)) ([bde34c5](https://github.com/autonomouslogic/custom-spec-filter/commit/bde34c526a87e2f1bfbda2d6ba5defc555d5eb40))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/cache action to v4 ([#43](https://github.com/autonomouslogic/custom-spec-filter/issues/43)) ([e7a5e95](https://github.com/autonomouslogic/custom-spec-filter/commit/e7a5e95390df57bacef089c47cc58ecddf5c0357))
+* **deps:** update actions/checkout action to v4 ([#35](https://github.com/autonomouslogic/custom-spec-filter/issues/35)) ([3000b5b](https://github.com/autonomouslogic/custom-spec-filter/commit/3000b5b49c02d496d9455e1536bce5d0f7c1fab6))
+* **deps:** update actions/setup-java action to v4 ([#39](https://github.com/autonomouslogic/custom-spec-filter/issues/39)) ([e8e203e](https://github.com/autonomouslogic/custom-spec-filter/commit/e8e203efdd1dc52b139bd130ba0438557e00c6bb))
+* **deps:** update all non-major dependencies ([#45](https://github.com/autonomouslogic/custom-spec-filter/issues/45)) ([02973e0](https://github.com/autonomouslogic/custom-spec-filter/commit/02973e0a8988461d66f27d819b4f5e27108ee9d8))
+* **deps:** update dependency gradle to v8 ([#26](https://github.com/autonomouslogic/custom-spec-filter/issues/26)) ([141ae4d](https://github.com/autonomouslogic/custom-spec-filter/commit/141ae4d8481c0b6a2d2371f382b0bcadc78e801c))
+* **deps:** update plugin org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin to v3 ([#44](https://github.com/autonomouslogic/custom-spec-filter/issues/44)) ([6221600](https://github.com/autonomouslogic/custom-spec-filter/commit/62216003d93033e00c708994b2bd1a107c11e661))
+
 ## [1.1.10](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.9...1.1.10) (2024-01-01)
 
 
