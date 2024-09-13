@@ -1,0 +1,11 @@
+{
+  "filteredSchemas": [
+    "BodyConsumer",
+    "DecoderResult",
+    "HttpMethod",
+    "HttpRequest",
+    "FullHttpRequest",
+    "HttpVersion",
+    "HttpResponder"
+  ]
+}

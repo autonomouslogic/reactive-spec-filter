@@ -9,13 +9,10 @@ import io.swagger.v3.oas.models.media.Content;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.RequestBody;
 import io.swagger.v3.oas.models.responses.ApiResponse;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -25,14 +22,11 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class CustomSpecFilter extends AbstractSpecFilter {
-	private static final Set<String> filteredSchemas = new HashSet<>(Arrays.asList(
-			"BodyConsumer",
-			"DecoderResult",
-			"HttpMethod",
-			"HttpRequest",
-			"FullHttpRequest",
-			"HttpVersion",
-			"HttpResponder"));
+	private final List<String> filteredSchemas;
+
+	public CustomSpecFilter() {
+		filteredSchemas = ConfigLoader.loadConfig().getFilteredSchemas();
+	}
 
 	@Override
 	public Optional<OpenAPI> filterOpenAPI(
