@@ -1,5 +1,24 @@
 Custom SpecFilter Changelog
 
+## [1.2.0](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.13...1.2.0) (2024-09-13)
+
+
+### Features
+
+* External config ([#55](https://github.com/autonomouslogic/custom-spec-filter/issues/55)) ([4227de8](https://github.com/autonomouslogic/custom-spec-filter/commit/4227de8613ad85937bdefd16bf402ab5675e5c26))
+
+
+### Documentation
+
+* External config doc ([#56](https://github.com/autonomouslogic/custom-spec-filter/issues/56)) ([95b718d](https://github.com/autonomouslogic/custom-spec-filter/commit/95b718def14237c08f23eca0cae2e31dda241e2c))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all non-major dependencies ([#53](https://github.com/autonomouslogic/custom-spec-filter/issues/53)) ([b3dbaf8](https://github.com/autonomouslogic/custom-spec-filter/commit/b3dbaf838e08116149f9615f395830f261a75ef8))
+* **deps:** update all non-major dependencies ([#54](https://github.com/autonomouslogic/custom-spec-filter/issues/54)) ([b769433](https://github.com/autonomouslogic/custom-spec-filter/commit/b769433340070130de18d291cb5a56aafc81341c))
+* **deps:** update plugin io.github.gradle-nexus.publish-plugin to v2 ([#49](https://github.com/autonomouslogic/custom-spec-filter/issues/49)) ([be17869](https://github.com/autonomouslogic/custom-spec-filter/commit/be17869e9b2576e9bfc795c2062b3e6f104f1a34))
+
 ## [1.1.13](https://github.com/autonomouslogic/custom-spec-filter/compare/1.1.12...1.1.13) (2024-07-01)
 
 
