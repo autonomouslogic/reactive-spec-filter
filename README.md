@@ -51,6 +51,22 @@ resolve {
 </project>
 ```
 
+A number of schema names are removed by default.
+To override the default and customise which schemas are removed, create a file in the root of your project called `customspecfilter.json`:
+```json
+{
+  "filteredSchemas": [
+    "BodyConsumer",
+    "DecoderResult",
+    "HttpMethod",
+    "HttpRequest",
+    "FullHttpRequest",
+    "HttpVersion",
+    "HttpResponder"
+  ]
+}
+```
+
 ## Resources
 * https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Extensions#filters
 
